@@ -1,0 +1,40 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.dio'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '16'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator:2.5.3'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.3'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.5.3'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools:2.5.3'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.3'
+
+	implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.4.2.Final'
+
+	compileOnly 'org.projectlombok:lombok:1.18.20'
+	annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+	runtimeOnly 'com.h2database:h2:1.4.200'
+
+//	implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.10'
+}
+
+test {
+	useJUnitPlatform()
+}
