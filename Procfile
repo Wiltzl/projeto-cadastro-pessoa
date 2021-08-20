@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/cadastroApiApplication-0.0.1-SNAPSHOT.jar
+web: java -jar -Dspring.profiles.active=heroku build/libs/cadastroApiApplication-0.0.1-SNAPSHOT.jar
