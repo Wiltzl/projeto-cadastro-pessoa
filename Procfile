@@ -1,1 +1,1 @@
-web: java -jar -Dspring.profiles.active=heroku build/libs/cadastroApiApplication-0.0.1-SNAPSHOT.jar
+web: java -jar target/myapp-1.0.0.jar
