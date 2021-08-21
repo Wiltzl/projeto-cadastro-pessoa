@@ -1,1 +1,1 @@
-web: java -jar target/cadastroApiApplication-1.0.0.jar
+web: java $JAVA_OPTS -jar -Dserver.port=$PORT target/cadastroApiApplication.jar
