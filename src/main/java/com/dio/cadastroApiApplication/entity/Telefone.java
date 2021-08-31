@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 @Data
@@ -24,5 +26,7 @@ public class Telefone {
     private TipoTelefone type;
 
     @Column(nullable = false)
+    @NotEmpty
+    @Size(min = 13, max = 14)
     private String numero;
 }
